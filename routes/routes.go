@@ -11,6 +11,6 @@ import (
 
 var SetupServer = func(appPort string) {
 	
-	http.Handle("/filelist", &api.FileApi{})
+	http.Handle("/file", &api.FileApi{})
 	http.ListenAndServe(":8080", nil)
 }
