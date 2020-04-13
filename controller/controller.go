@@ -76,10 +76,9 @@ var FileList = func(w http.ResponseWriter, r *http.Request) {
 
 var UpdateFileName = func(w http.ResponseWriter, r *http.Request) {
 	if requestLimit.IsAvailable() {
-		old :=  "./staic/" + r.FormValue("oldfilename")
-		new :=  "./staic/" + r.FormValue("newfilename")
-			
-		err := os.Rename( old, new)
+		r.ParseMultipartForm(1024)
+	
+		err := os.Rename("./static/"+r.FormValue("oldfilename"), "./static/"+r.FormValue("newfilename"))
 		if err != nil {
         	fmt.Println(err)
         	return 
