@@ -15,7 +15,7 @@ $ ./go run index.go
 
 
 ## API Endpoint
-- http://localhost:8080/filelist
+- http://localhost:8080/filel
     - `GET`: get list of filename
     ```
     200 ok 
@@ -29,8 +29,7 @@ $ ./go run index.go
     }
     ```
     
-- http://localhost:8080/filesremove
-    - `DELETE`: remove filen
+    - `DELETE`: remove file
     ```
     body - formdate
     {
@@ -45,7 +44,7 @@ $ ./go run index.go
     }
     ```
 
-- http://localhost:8080/fileupload
+
     - `POST`: upload new file
     ```
     body - formdate
@@ -61,10 +60,9 @@ $ ./go run index.go
     "uploadfilename": "螢幕快照 2020-04-09 下午5.16.39.png"
     }
     ```
-- http://localhost:8080/filerename
     - `PUT`: rename file
     ```
-    body - formdate
+    body - x-www-form-urlencoded
     {
         "oldfilename": "XXX.XXX", // aaa.png
         "newfilename": "XXX.XXX", // bbb.png
