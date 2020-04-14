@@ -15,7 +15,7 @@ $ ./go run index.go
 
 
 ## API Endpoint
-- http://localhost:8080/filel
+- http://localhost:8080/file
     - `GET`: get list of filename
     ```
     200 ok 
